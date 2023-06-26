@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "run-p  tailwind:watch sass:watch server",
+    "cp2": "run-p  tailwind:watch sass:watch",
     "sass": "sass src/scss:src/style",
     "sass:watch": "npm run sass -- --watch",
     "tailwind": "tailwind -i ./src/style/input.css -o ./src/style/output.css",
