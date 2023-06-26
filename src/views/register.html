@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>회원가입</title>
   <link rel="stylesheet" href="./../style/index.css" />
-  <link rel="stylesheet" href="./../style/output.css" />
+  <!-- <link rel="stylesheet" href="./../style/output.css" /> -->
   <!-- <link rel="stylesheet" href="./style/register.css" /> -->
 </head>
 
@@ -97,88 +97,104 @@
   <main>
     <div class="registrationContainer">
 
-      <h2 class="registrationContainer__title">회원가입</h2>
+      <h3 class="registrationContainer__title">회원가입</h3>
 
-      <form id="registrationForm" class="registrationContainer__form
-      flex flex-col" action="your-server-side-script" method="POST">
+      <form id="registrationForm" class="registrationContainer__form action="your-server-side-script" method="POST">
 
-        <label class="field__label flex justify-between items-center" for="username">
-          <span class="field__question">ID :</span>
+        <label class="field__label flex justify-between" for="username">
+          <span class="field__question">아이디</span>
+
           <input class="field__input" type="text" id="username" name="username" required>
-          <button type="button">인증</button>
+
+          <button type="field__button">중복확인</button>
         </label>
         
-        <label class="field__label flex justify-between items-center" for="password">
-          <span class="field__question">Password :</span>
+        <label class="field__label flex justify-between" for="password">
+          <span class="field__question">비밀번호</span>
+
           <input class="field__input" type="password" id="password" name="password" required>
-          <button type="button">인증</button>
+
+          <button type="field__button">중복확인</button>
         </label>
-      </form>
-      
-      <!-- <label class="field" for="passwordCheck">
-          <span class="field__label">Password Check:</span>
+        
+        <!-- </form> -->
+        
+      <label class="field__label" for="passwordCheck">
+          <span class="field__question">비밀번호 확인</span>
           <input class="field__input" type="password" id="passwordCheck" name="passwordCheck" required>
-        </label>
+          <button type="field__button">중복확인</button>
+      </label>
+      
+      <label class="field__label" for="name">
+        <span class="field__question">이름</span>
+        <input class="field__input" type="text" id="name" name="name" required>
+          <button type="field__button">중복확인</button>
+      </label>
   
-        <label class="field" for="name">
-          <span class="field__label">Name : </span>
-          <input class="field__input" type="text" id="name" name="name" required>
-        </label>
-  
-        <label class="field" for="email">
-          <span class="field__label">Email Address : </span>
-          <input class="field__input" type="email" id="email" name="email" required>
-        </label>
-  
-        <label class="field" for="phoneNumber">
-          <span class="field__label">Phone Number : </span>
+      <label class="field__label" for="email">
+        <span class="field__question">이메일 주소</span>
+        <input class="field__input" type="email" id="email" name="email" required>
+          <button type="field__button">중복확인</button>
+      </label>
+      
+      <label class="field__label" for="phoneNumber">
+        <span class="field__question">전화번호</span>
           <input class="field__input" type="tel" id="phoneNumber" name="phoneNumber" required>
+          <button type="field__button">중복확인</button>
         </label>
-  
-        <label class="field" for="localAddress">
-          <span class="field__label">Local Address:</span>
+        
+        <label class="field__label" for="localAddress">
+          <span class="field__question">주소</span>
           <input class="field__input" type="text" id="localAddress" name="localAddress" required>
+          <button type="field__button">중복확인</button>
         </label>
-  
-        <fieldset class="field">
-          <legend class="field__label">Gender:</legend>
+        
+        <fieldset class="field__label">
+          <span class="field__question">성별</span>
+          <legend class="field__gender">Gender</legend>
           <label for="genderMale">
-            <input type="radio" id="genderMale" name="gender" value="Male" required>
-            Male
+            <input type="radio" id="genderMale" name="gender" value="Male">
+            남자
           </label>
           <label for="genderFemale">
             <input type="radio" id="genderFemale" name="gender" value="Female">
-            Female
+            여자
+          </label>
+          <label for="none">
+            <input type="radio" id="genderNone" name="gender" value="None">
+            선택 안함
+            <button type="field__button">중복확인</button>
           </label>
         </fieldset>
-  
-        <label class="field" for="birthdate">
-          <span class="field__label">Birthdate:</span>
-          <input class="field__input" type="date" id="birthdate" name="birthdate" required>
+        
+        <label class="field__label" for="birthdate">
+          <span class="field__question">생년월일</span>
+          <input class="field__input" type="date" id="birthdate" name="birthdate">
+          <button type="field__button">중복확인</button>
         </label>
-  
-        <label class="checkbox">
+        
+        
+        <fieldset class="field__label">
+          <span class="field__question">추가입력 사항</span>
+          <legend class="field__gender">Gender</legend>
+          <label for="genderMale">
+            <input type="radio" id="genderMale" name="gender" value="Male">
+            친구초대 추천 아이디
+          </label>
+          <label for="genderFemale">
+            <input type="radio" id="genderFemale" name="gender" value="Female">
+            참여 이벤트명
+          </label>
+          <button type="field__button">중복확인</button>
+        </fieldset>
+
+        <label class="field__label">
+          <span class="checkbox__label">이용약관 동의</span>
           <input class="checkbox__input" type="checkbox" name="termsCheck" required>
-          <span class="checkbox__label">I accept the terms and conditions</span>
+          <span class="checkbox__label">약관내용 - detail/summary</span>
         </label>
-        <label class="checkbox">
-          <input class="checkbox__input" type="checkbox" name="termsCheck" required>
-          <span class="checkbox__label">I accept the terms and conditions</span>
-        </label>
-        <label class="checkbox">
-          <input class="checkbox__input" type="checkbox" name="termsCheck" required>
-          <span class="checkbox__label">I accept the terms and conditions</span>
-        </label>
-        <label class="checkbox">
-          <input class="checkbox__input" type="checkbox" name="termsCheck" required>
-          <span class="checkbox__label">I accept the terms and conditions</span>
-        </label>
-        <label class="checkbox">
-          <input class="checkbox__input" type="checkbox" name="termsCheck" required>
-          <span class="checkbox__label">I accept the terms and conditions</span>
-        </label>
-  
-        <input class="submitBtn" type="submit" value="Register"> -->
+      
+        <input class="submitRegister" type="submit" value="가입하기">
       </form>
     </div>
 
