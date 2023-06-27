@@ -4,6 +4,10 @@
   display: flex
 }
 
+.hidden {
+  display: none
+}
+
 .justify-between {
   justify-content: space-between
 }

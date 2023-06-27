@@ -1,38 +1,43 @@
 @use "../utils" as *;
 
+.registrationContainer__title {
+  text-align: center;
+}
+
 .registrationContainer__form {
   display: flex;
   flex-direction: column;
   @include paddingPct(25);
 }
 
-.field__label {
+
+.submitRegister {
+  width: 20%;
+}
+
+.register__label {
   display: flex;
   justify-content: space-between;
   @include paddingY(15);
-
+  
 }
 
-.field__question {
-  width: 20%
-}
-
-.field__input {
-  width: 55%
-}
-
-.field__button {
-  width: 25% checkbox__input
-}
-
-.checkbox__input {
-  width: 3%
-}
-
-.registrationContainer__title {
+.register__question {
   text-align: center;
+  width: 20%;
+  background-color: red;
 }
 
-.submitRegister {
-  width: 20%
+.register__input {
+  width: 55%;
+  background-color: blue;
+}
+
+.register__button {
+  width: auto;
+  background-color: green;
+}
+
+.register__checkbox {
+  width: 3%;
 }
