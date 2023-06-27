@@ -1,15 +1,7 @@
 /* @tailwind base; */
 
-.flex {
-  display: flex
-}
-
 .hidden {
   display: none
-}
-
-.justify-between {
-  justify-content: space-between
 }
 
 .bg-blue-600 {

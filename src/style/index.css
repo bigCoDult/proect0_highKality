@@ -1789,59 +1789,147 @@ button[class*=mainPopup__close] {
   display: flex;
 }
 
+.registrationContainer {
+  width: 600px;
+  margin: 0 auto;
+}
+
 .registrationContainer__form {
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5625rem;
-  padding-right: 1.5625rem;
+  width: 650px;
   display: flex;
   flex-direction: column;
 }
 
+.registrationContainer__title {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.pilsu::before {
+  content: "*";
+  color: red;
+}
+
+.pilsu {
+  display: block;
+  text-align: end;
+  font-size: 4px;
+}
+
+.register__hr {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.register__beOneLine {
+  display: flex;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  height: 40px;
+  column-gap: 8px;
+}
+
+.register__beOneLine__term {
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  display: flex;
+}
+
 .register__label {
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  font-weight: 600;
+}
+
+.register__label::after {
+  content: "*";
+  color: red;
 }
 
 .register__question {
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  align-items: center;
   width: 20%;
-  background-color: red;
+}
+
+.register__question__term {
+  display: flex;
+  width: 20%;
 }
 
 .register__input {
-  display: inline-block;
+  display: flex;
   width: 50%;
-  background-color: greenyellow;
-}
-
-.register__radio__all {
-  display: inline-block;
-  text-align: justify;
-}
-
-.register__checkbox__input {
-  width: 50%;
-  background-color: greenyellow;
 }
 
 .register__button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20%;
-  background-color: blue;
+}
+
+.register__input__address {
+  display: block;
+  height: 40px;
+  width: 320px;
+}
+
+.register__beOneLine .addressBox {
+  height: 68px;
+  font-size: 4px;
+}
+
+.register__input__address {
+  font-size: 16px;
+}
+
+.register__radioS {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.register__checkboxS {
+  display: flex;
+  flex-direction: column;
+}
+
+.register__checkbox__input {
+  display: inline-block;
+}
+
+.register__checkbox__label {
+  font-weight: 600;
+  display: inline-block;
 }
 
 .register__submitAll {
-  width: 50%;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
 }
 
-.registrationContainer__title {
-  text-align: center;
-  font-size: 40px;
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
+.register__button,
+.register__input__address,
+.register__submitAll {
+  border: solid #5F0080 1px;
+  border-radius: 4px;
+  color: #5F0080;
+  background-color: #ffffff;
+  font-weight: 700;
+}
+
+.register__submitAll {
+  color: #ffffff;
+  background-color: #5F0080;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 /*# sourceMappingURL=index.css.map */

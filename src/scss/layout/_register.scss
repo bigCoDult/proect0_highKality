@@ -15,76 +15,203 @@ $register__wM: 90% - $register__wLR;
 }
 
 
+.registrationContainer {
+  width: 600px;
+  margin: 0 auto;
+}
 
 .registrationContainer__form {
-  @include containerMax;
-  @include paddingX(25);
+  // @include containerMax;
+  width: 650px;
+  // @include marginY(15);
   display: flex;
   flex-direction: column;
+  // margin: 0 auto;
+  // justify-content: center;
+}
+
+.registrationContainer__title {
+  text-align: center;
+  font-size: 25px;
+padding-top: (80px);
+padding-bottom: (30px);
+}
+
+.pilsu::before{
+  content: '*';
+  color: red;
+}
+
+.pilsu {
+  display: block;
+  text-align: end;
+  font-size: 4px;
+}
+
+.register__hr{
+  @include marginY(10);
 }
 
 
-.register__label {
-  // 위아래 여백
-  @include paddingY(15);
 
-  // display: flex;
+.register__beOneLine {
+  display: flex;
+  @include marginY(10);
+  @include hRegi;
+  column-gap: 8px;
+  // 위아래 여백
+
   // justify-content: space-between;
   // align-items: center;
 
 }
 
-.register__question {
-  display: inline-block;
-  text-align: center;
-  @include wX($register__wL);
-  background-color: red;
+.register__beOneLine__term {
+  @include marginY(15);
+  display: flex;
+  // @include paddingY(15);
 }
+
+// .register__beOneLine__radio {
+// @include marginY(15);
+// @include hRegi;
+// display: flex;
+// column-gap: 8px;
+// // @include paddingY(15);
+// //!! inline-block의 내부 요소를 justify하는 방법?
+// // text-align: justify;
+// }
+
+
+
+.register__label {
+  // display: inline-block;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  @include wX($register__wL);
+  // background-color: red;
+  font-weight: 600;
+}
+.register__label::after{
+  content: '*';
+  color: red;
+}
+
+.register__question {
+  // display: inline-block;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  @include wX($register__wL);
+  // background-color: red;
+}
+
+.register__question__term {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  @include wX($register__wL);
+  // background-color: red;
+
+}
+
 
 .register__input {
-  display: inline-block;
+  // display: inline-block;
+  display: flex;
+
   @include wX($register__wM);
-  background-color: greenyellow;
-}
-
-
-.register__radio__all {
-  display: inline-block;
-  text-align: justify;
-  // @include wX($register__wM);
-}
-
-
-// .checkboxS {
-//   display: flex;
-//   flex-direction: column;
-
-// }
-.register__checkbox__input {
-  @include wX($register__wM);
-  // display: ;
-  background-color: greenyellow;
+  // background-color: greenyellow;
 }
 
 .register__button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @include wX($register__wR);
-  background-color: blue;
+  // background-color: blue;
+
 }
+
+.register__input__address {
+  display: block;
+  height: 40px;
+  width: 320px;
+  // background-color: greenyellow;
+}
+
+.register__beOneLine .addressBox {
+  height: 68px;
+  font-size: 4px;
+}
+
+.register__input__address{
+  font-size: 16px;
+}
+
+.register__radioS {
+  display: flex;
+  @include wX($register__wM);
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  // background-color: greenyellow;
+
+}
+
+
+.register__checkboxS {
+  // @include wX($register__wLR);
+  // height: 300px;
+  display: flex;
+  flex-direction: column;
+  
+  // background-color: greenyellow;
+}
+
+.register__checkbox__input {
+  display: inline-block;
+  
+}
+
+.register__checkbox__label {
+  font-weight: 600;
+  display: inline-block;
+}
+
+// .register__checkbox__input {
+//   display: inline-block;
+// }
+
+// .register__checkbox__label {
+//   display: inline-block;
+// }
+
 
 
 
 
 .register__submitAll {
-  @include wX(50%)
+  @include wX(60%);
+  height: 40px;
+  margin: 0 auto;
 }
 
-.registrationContainer__title {
-  text-align: center;
-  font-size: 40px;
-  @include paddingY(15);
-}
+.register__button,
+.register__input__address,
+.register__submitAll 
+{
 
-// .register__hr{
-//   display: block
-// }
+  border: solid $purple 1px;
+  border-radius: 4px;
+  color: $purple;
+  background-color: $white;
+  font-weight: 700;
+}
+.register__submitAll {
+  color: $white;
+  background-color: $purple;
+  @include marginY(20);
+
+}
