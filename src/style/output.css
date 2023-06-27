@@ -4,22 +4,6 @@
   display: flex
 }
 
-.w-1\/6 {
-  width: 16.666667%
-}
-
-.w-4\/6 {
-  width: 66.666667%
-}
-
-.flex-col {
-  flex-direction: column
-}
-
-.items-center {
-  align-items: center
-}
-
 .justify-between {
   justify-content: space-between
 }
@@ -27,13 +11,4 @@
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity))
-}
-
-.px-72 {
-  padding-left: 18rem;
-  padding-right: 18rem
-}
-
-.text-center {
-  text-align: center
 }

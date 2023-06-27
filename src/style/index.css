@@ -1387,4 +1387,42 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.registrationContainer__form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.field__label {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+
+.field__question {
+  width: 20%;
+}
+
+.field__input {
+  width: 55%;
+}
+
+.field__button {
+  width: 25% checkbox__input;
+}
+
+.checkbox__input {
+  width: 3%;
+}
+
+.registrationContainer__title {
+  text-align: center;
+}
+
+.submitRegister {
+  width: 20%;
+}
+
 /*# sourceMappingURL=index.css.map */
