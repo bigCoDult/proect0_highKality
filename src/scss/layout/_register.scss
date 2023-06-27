@@ -1,43 +1,90 @@
 @use "../utils" as *;
+@use "sass:math";
 
-.registrationContainer__title {
-  text-align: center;
+$register__wL: 20%;
+$register__wR: $register__wL;
+$register__wLR: $register__wL + $register__wR;
+$register__wM: 90% - $register__wLR;
+
+@mixin wX($width1) {
+  width: $width1;
 }
+
+@mixin hRegi {
+  height: 40px;
+}
+
+
 
 .registrationContainer__form {
+  @include containerMax;
+  @include paddingX(25);
   display: flex;
   flex-direction: column;
-  @include paddingPct(25);
 }
 
-
-.submitRegister {
-  width: 20%;
-}
 
 .register__label {
-  display: flex;
-  justify-content: space-between;
+  // 위아래 여백
   @include paddingY(15);
-  
+
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+
 }
 
 .register__question {
+  display: inline-block;
   text-align: center;
-  width: 20%;
+  @include wX($register__wL);
   background-color: red;
 }
 
 .register__input {
-  width: 55%;
-  background-color: blue;
+  display: inline-block;
+  @include wX($register__wM);
+  background-color: greenyellow;
+}
+
+
+.register__radio__all {
+  display: inline-block;
+  text-align: justify;
+  // @include wX($register__wM);
+}
+
+
+// .checkboxS {
+//   display: flex;
+//   flex-direction: column;
+
+// }
+.register__checkbox__input {
+  @include wX($register__wM);
+  // display: ;
+  background-color: greenyellow;
 }
 
 .register__button {
-  width: auto;
-  background-color: green;
+  display: inline-block;
+  @include wX($register__wR);
+  background-color: blue;
 }
 
-.register__checkbox {
-  width: 3%;
+
+
+
+.register__submitAll {
+  @include wX(50%)
 }
+
+.registrationContainer__title {
+  text-align: center;
+  font-size: 40px;
+  @include paddingY(15);
+}
+
+// .register__hr{
+//   display: block
+// }

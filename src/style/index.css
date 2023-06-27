@@ -1789,46 +1789,59 @@ button[class*=mainPopup__close] {
   display: flex;
 }
 
-.registrationContainer__title {
-  text-align: center;
-}
-
 .registrationContainer__form {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
   display: flex;
   flex-direction: column;
-  padding-left: 25%;
-  padding-right: 25%;
-}
-
-.submitRegister {
-  width: 20%;
 }
 
 .register__label {
-  display: flex;
-  justify-content: space-between;
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
 }
 
 .register__question {
+  display: inline-block;
   text-align: center;
   width: 20%;
   background-color: red;
 }
 
 .register__input {
-  width: 55%;
-  background-color: blue;
+  display: inline-block;
+  width: 50%;
+  background-color: greenyellow;
+}
+
+.register__radio__all {
+  display: inline-block;
+  text-align: justify;
+}
+
+.register__checkbox__input {
+  width: 50%;
+  background-color: greenyellow;
 }
 
 .register__button {
-  width: auto;
-  background-color: green;
+  display: inline-block;
+  width: 20%;
+  background-color: blue;
 }
 
-.register__checkbox {
-  width: 3%;
+.register__submitAll {
+  width: 50%;
+}
+
+.registrationContainer__title {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
 }
 
 /*# sourceMappingURL=index.css.map */
